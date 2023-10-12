@@ -1,0 +1,347 @@
+use saga
+
+
+Inserts - Insert
+
+{
+  "_id": ObjectId("5f9d9f87a0c3fd7d8e5407f3"),
+  "producto": "Libro de Matemáticas",
+  "descripcion": "Libro de matemáticas para el curso de álgebra lineal.",
+  "fecha_prestamo": ISODate("2023-09-21T10:00:00Z"),
+  "fecha_entrega": ISODate("2023-10-05T15:30:00Z")
+}
+
+
+///// Inset 
+
+db.estudiantes.insertMany(
+    [
+  {
+    "_id": ObjectId("5f9d9f87a0c3fd7d8e5407f0"),
+    "nombre": "Juan",
+    "apellido": "Pérez",
+    "cc": "1234567890",
+    "correo": "juan@gmail.com",
+    "grado": "1101",
+    "rol": "estudiante"
+  },
+  {
+    "_id": ObjectId("5f9d9f87a0c3fd7d8e5407f1"),
+    "nombre": "María",
+    "apellido": "González",
+    "cc": "9876543210",
+    "correo": "maria@gmail.com",
+    "grado": "1101",
+    "rol": "estudiante"
+  },
+  {
+    "_id": ObjectId("5f9d9f87a0c3fd7d8e5407f2"),
+    "nombre": "Carlos",
+    "apellido": "Rodríguez",
+    "cc": "4567890123",
+    "correo": "carlos@gmail.com",
+    "grado": "1101",
+    "rol": "estudiante"
+  },
+  {
+    "_id": ObjectId("5f9d9f87a0c3fd7d8e5407f3"),
+    "nombre": "Laura",
+    "apellido": "López",
+    "cc": "2345678901",
+    "correo": "laura@gmail.com",
+    "grado": "1101",
+    "rol": "estudiante"
+  },
+  {
+    "_id": ObjectId("5f9d9f87a0c3fd7d8e5407f4"),
+    "nombre": "Pedro",
+    "apellido": "Martínez",
+    "cc": "3456789012",
+    "correo": "pedro@gmail.com",
+    "grado": "1101",
+    "rol": "estudiante"
+  },
+  {
+    "_id": ObjectId("5f9d9f87a0c3fd7d8e5407f5"),
+    "nombre": "Isabel",
+    "apellido": "Ramírez",
+    "cc": "6543210987",
+    "correo": "isabel@gmail.com",
+    "grado": "1101",
+    "rol": "estudiante"
+  },
+  {
+    "_id": ObjectId("5f9d9f87a0c3fd7d8e5407f6"),
+    "nombre": "Antonio",
+    "apellido": "Ruiz",
+    "cc": "5432109876",
+    "correo": "antonio@gmail.com",
+    "grado": "1101",
+    "rol": "estudiante"
+  },
+  {
+    "_id": ObjectId("5f9d9f87a0c3fd7d8e5407f7"),
+    "nombre": "Lucía",
+    "apellido": "Fernández",
+    "cc": "4321098765",
+    "correo": "lucia@gmail.com",
+    "grado": "1101",
+    "rol": "estudiante"
+  },
+  {
+    "_id": ObjectId("5f9d9f87a0c3fd7d8e5407f8"),
+    "nombre": "Carlos",
+    "apellido": "López",
+    "cc": "3210987654",
+    "correo": "carlos2@gmail.com",
+    "grado": "1101",
+    "rol": "estudiante"
+  },
+  {
+    "_id": ObjectId("5f9d9f87a0c3fd7d8e5407f9"),
+    "nombre": "Marta",
+    "apellido": "Gómez",
+    "cc": "2109876543",
+    "correo": "marta@gmail.com",
+    "grado": "1101",
+    "rol": "estudiante"
+  }
+]
+)
+
+db.profesores.insertMany(
+    [
+  {
+    "_id": ObjectId("5f9d9f87a0c3fd7d8e5407fa"),
+    "nombre": "Olga Lucia",
+    "apellido": "Toledo",
+    "cc": "1234567890",
+    "correo": "juan@gmail.com",
+    "fichas": [2502639, 2503912, 2503122],
+    "rol": "instructor"
+  },
+  {
+    "_id": ObjectId("5f9d9f87a0c3fd7d8e5407fb"),
+    "nombre": "María",
+    "apellido": "González",
+    "cc": "9876543210",
+    "correo": "maria@gmail.com",
+    "fichas": [2502639, 2503912, 2503122],
+    "rol": "instructor"
+  },
+  {
+    "_id": ObjectId("5f9d9f87a0c3fd7d8e5407fc"),
+    "nombre": "Carlos",
+    "apellido": "Rodríguez",
+    "cc": "4567890123",
+    "correo": "carlos@gmail.com",
+    "fichas": [2502639, 2503912, 2503122],
+    "rol": "instructor"
+  },
+  {
+    "_id": ObjectId("5f9d9f87a0c3fd7d8e5407fd"),
+    "nombre": "Laura",
+    "apellido": "López",
+    "cc": "2345678901",
+    "correo": "laura@gmail.com",
+    "fichas": [2502639, 2503912, 2503122],
+    "rol": "instructor"
+  },
+  {
+    "_id": ObjectId("5f9d9f87a0c3fd7d8e5407fe"),
+    "nombre": "Pedro",
+    "apellido": "Martínez",
+    "cc": "3456789012",
+    "correo": "pedro@gmail.com",
+    "fichas": [2502639, 2503912, 2503122],
+    "rol": "instructor"
+  },
+  {
+    "_id": ObjectId("5f9d9f87a0c3fd7d8e5407ff"),
+    "nombre": "Isabel",
+    "apellido": "Ramírez",
+    "cc": "6543210987",
+    "correo": "isabel@gmail.com",
+    "fichas": [2502639, 2503912, 2503122],
+    "rol": "instructor"
+  },
+  {
+    "_id": ObjectId("5f9d9f87a0c3fd7d8e540800"),
+    "nombre": "Antonio",
+    "apellido": "Ruiz",
+    "cc": "5432109876",
+    "correo": "antonio@gmail.com",
+    "fichas": [2502639, 2503912, 2503122],
+    "rol": "instructor"
+  },
+  {
+    "_id": ObjectId("5f9d9f87a0c3fd7d8e540801"),
+    "nombre": "Lucía",
+    "apellido": "Fernández",
+    "cc": "4321098765",
+    "correo": "lucia@gmail.com",
+    "fichas": [2502639, 2503912, 2503122],
+    "rol": "instructor"
+  },
+  {
+    "_id": ObjectId("5f9d9f87a0c3fd7d8e540802"),
+    "nombre": "Carlos",
+    "apellido": "López",
+    "cc": "3210987654",
+    "correo": "carlos2@gmail.com",
+    "fichas": [2502639, 2503912, 2503122],
+    "rol": "instructor"
+  },
+  {
+    "_id": ObjectId("5f9d9f87a0c3fd7d8e540803"),
+    "nombre": "Marta",
+    "apellido": "Gómez",
+    "cc": "2109876543",
+    "correo": "marta@gmail.com",
+    "fichas": [2502639, 2503912, 2503122],
+    "rol": "instructor"
+  }
+]
+)
+
+db.grados.insertMany(
+    [
+    {
+        "grado": "101",
+        "jornada": "mañana"
+    },
+    {
+        "grado": "102",
+        "jornada": "mañana"
+    },
+    {
+        "grado": "201",
+        "jornada": "mañana"
+    },
+    {
+        "grado": "202",
+        "jornada": "mañana"
+    },
+    {
+        "grado": "301",
+        "jornada": "mañana"
+    },
+    {
+        "grado": "302",
+        "jornada": "mañana"
+    },
+    {
+        "grado": "401",
+        "jornada": "mañana"
+    },
+    {
+        "grado": "402",
+        "jornada": "mañana"
+    },
+    {
+        "grado": "501",
+        "jornada": "mañana"
+    },
+    {
+        "grado": "502",
+        "jornada": "mañana"
+    },
+    {
+        "grado": "601",
+        "jornada": "mañana"
+    },
+    {
+        "grado": "602",
+        "jornada": "mañana"
+    },
+    {
+        "grado": "701",
+        "jornada": "mañana"
+    },
+    {
+        "grado": "702",
+        "jornada": "mañana"
+    },
+    {
+        "grado": "801",
+        "jornada": "mañana"
+    },
+    {
+        "grado": "802",
+        "jornada": "mañana"
+    },
+    {
+        "grado": "901",
+        "jornada": "mañana"
+    },
+    {
+        "grado": "902",
+        "jornada": "mañana"
+    },
+    {
+        "grado": "1001",
+        "jornada": "mañana"
+    },
+    {
+        "grado": "1002",
+        "jornada": "mañana"
+    },
+    {
+        "grado": "1101",
+        "jornada": "mañana"
+    }
+]
+)
+
+db.asistencias.insertMany([
+  {
+    "nombre": "Juan",
+    "apellido": "Cera",
+    "fecha_asistencia": new Date("2023-09-27T08:30:00Z")
+  },
+  {
+    "nombre": "Ana",
+    "apellido": "Gómez",
+    "fecha_asistencia": new Date("2023-09-28T09:15:00Z")
+  },
+  {
+    "nombre": "Luis",
+    "apellido": "Martínez",
+    "fecha_asistencia": new Date("2023-09-29T10:00:00Z")
+  },
+  {
+    "nombre": "María",
+    "apellido": "Rodríguez",
+    "fecha_asistencia": new Date("2023-09-30T11:45:00Z")
+  },
+  {
+    "nombre": "Pedro",
+    "apellido": "González",
+    "fecha_asistencia": new Date("2023-10-01T13:30:00Z")
+  },
+  {
+    "nombre": "Laura",
+    "apellido": "Pérez",
+    "fecha_asistencia": new Date("2023-10-02T14:15:00Z")
+  },
+  {
+    "nombre": "Carlos",
+    "apellido": "López",
+    "fecha_asistencia": new Date("2023-10-03T15:00:00Z")
+  },
+  {
+    "nombre": "Marta",
+    "apellido": "Hernández",
+    "fecha_asistencia": new Date("2023-10-04T16:45:00Z")
+  },
+  {
+    "nombre": "Javier",
+    "apellido": "Fernández",
+    "fecha_asistencia": new Date("2023-10-05T17:30:00Z")
+  },
+  {
+    "nombre": "Elena",
+    "apellido": "Sánchez",
+    "fecha_asistencia": new Date("2023-10-06T18:15:00Z")
+  }
+])
